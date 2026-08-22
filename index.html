@@ -841,7 +841,7 @@ async function submitQuiz() {
   const payload = {
     full_name: state.participant.fullName,
     dob: state.participant.dob,
-    phone_no: state.participant.phone,
+    PhoneNo: state.participant.phone,
     email: state.participant.email,
     city: state.participant.city,
     score,
@@ -912,7 +912,7 @@ async function loadLeaderboard() {
   if (!supabaseClient) return;
   const { data, error } = await supabaseClient
     .from('quiz_attempts')
-    .select('id,full_name,dob,phone_no,email,city,score,total_questions,elapsed_seconds,submitted_at')
+    .select('id,full_name,dob,PhoneNo,email,city,score,total_questions,elapsed_seconds,submitted_at')
     .order('score', {ascending: false})
     .order('elapsed_seconds', {ascending: true})
     .order('submitted_at', {ascending: true});
@@ -937,7 +937,7 @@ function exportLeaderboardXlsx() {
     'Rank': i + 1,
     'Full Name': r.full_name || '',
     'City': r.city || '',
-    'Phone No': r.phone_no || '',
+    'Phone No': r.PhoneNo || '',
     'Email': r.email || '',
     'DOB': r.dob || '',
     'Score': r.score,
@@ -979,7 +979,7 @@ function renderLeaderboard(rows) {
       <td><span class="rank-badge">${i+1}</span></td>
       <td>${escapeHtml(r.full_name)}</td>
       <td>${escapeHtml(r.city)}</td>
-      <td>${escapeHtml(r.phone_no || '')}</td>
+      <td>${escapeHtml(r.PhoneNo || '')}</td>
       <td>${escapeHtml(r.email)}</td>
       <td>${r.score} / ${r.total_questions}</td>
       <td>${fmtTime(r.elapsed_seconds)}</td>
