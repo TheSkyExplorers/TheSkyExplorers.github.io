@@ -449,7 +449,8 @@ img{max-width:100%}
  * ----------------------------------
  * 100 questions sourced from ISRO_Space_Missions_Quiz_100.xlsx.
  * Difficulty breakdown: 32 Medium, 35 Hard, 33 Very Hard.
- * Each quiz draws 8 Medium + 8 Hard + 4 Very Hard = 20 questions (see DIFFICULTY_MIX below).
+ * Each quiz draws 7 Medium + 7 Hard + 3 Very Hard = 17 questions (see DIFFICULTY_MIX below),
+ * plus exactly 1 satellite, 1 puzzle, and 1 audio question (see SPECIAL_POOLS) = 20 total.
  *
  * MCQ shape:
  * {
@@ -576,9 +577,10 @@ const SATELLITE_QUESTIONS = [
 ];
 
 const PUZZLE_QUESTIONS = [
-  {id:'puz001',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/APJ-AbdulKalam_1.jpg','Puzzles/tiles/APJ-AbdulKalam_2.jpg','Puzzles/tiles/APJ-AbdulKalam_3.jpg','Puzzles/tiles/APJ-AbdulKalam_4.jpg','Puzzles/tiles/APJ-AbdulKalam_5.jpg','Puzzles/tiles/APJ-AbdulKalam_6.jpg','Puzzles/tiles/APJ-AbdulKalam_7.jpg','Puzzles/tiles/APJ-AbdulKalam_8.jpg','Puzzles/tiles/APJ-AbdulKalam_9.jpg']}]},
-  {id:'puz002',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/SubhanshuShukla_1.jpg','Puzzles/tiles/SubhanshuShukla_2.jpg','Puzzles/tiles/SubhanshuShukla_3.jpg','Puzzles/tiles/SubhanshuShukla_4.jpg','Puzzles/tiles/SubhanshuShukla_5.jpg','Puzzles/tiles/SubhanshuShukla_6.jpg','Puzzles/tiles/SubhanshuShukla_7.jpg','Puzzles/tiles/SubhanshuShukla_8.jpg','Puzzles/tiles/SubhanshuShukla_9.jpg']}]},
-  {id:'puz003',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/V.Sarabhai_1.jpg','Puzzles/tiles/V.Sarabhai_2.jpg','Puzzles/tiles/V.Sarabhai_3.jpg','Puzzles/tiles/V.Sarabhai_4.jpg','Puzzles/tiles/V.Sarabhai_5.jpg','Puzzles/tiles/V.Sarabhai_6.jpg','Puzzles/tiles/V.Sarabhai_7.jpg','Puzzles/tiles/V.Sarabhai_8.jpg','Puzzles/tiles/V.Sarabhai_9.jpg']}]},
+  {id:'puz001',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/AbjKalam/photo1_piece_01.jpg','Puzzles/tiles/AbjKalam/photo1_piece_02.jpg','Puzzles/tiles/AbjKalam/photo1_piece_03.jpg','Puzzles/tiles/AbjKalam/photo1_piece_04.jpg','Puzzles/tiles/AbjKalam/photo1_piece_05.jpg','Puzzles/tiles/AbjKalam/photo1_piece_06.jpg','Puzzles/tiles/AbjKalam/photo1_piece_07.jpg','Puzzles/tiles/AbjKalam/photo1_piece_08.jpg','Puzzles/tiles/AbjKalam/photo1_piece_09.jpg']}]},
+  {id:'puz002',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/Sarabhai/photo2_piece_01.jpg','Puzzles/tiles/Sarabhai/photo2_piece_02.jpg','Puzzles/tiles/Sarabhai/photo2_piece_03.jpg','Puzzles/tiles/Sarabhai/photo2_piece_04.jpg','Puzzles/tiles/Sarabhai/photo2_piece_05.jpg','Puzzles/tiles/Sarabhai/photo2_piece_06.jpg','Puzzles/tiles/Sarabhai/photo2_piece_07.jpg','Puzzles/tiles/Sarabhai/photo2_piece_08.jpg','Puzzles/tiles/Sarabhai/photo2_piece_09.jpg']}]},
+  {id:'puz003',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/S.Shukla/photo3_piece_01.jpg','Puzzles/tiles/S.Shukla/photo3_piece_02.jpg','Puzzles/tiles/S.Shukla/photo3_piece_03.jpg','Puzzles/tiles/S.Shukla/photo3_piece_04.jpg','Puzzles/tiles/S.Shukla/photo3_piece_05.jpg','Puzzles/tiles/S.Shukla/photo3_piece_06.jpg','Puzzles/tiles/S.Shukla/photo3_piece_07.jpg','Puzzles/tiles/S.Shukla/photo3_piece_08.jpg','Puzzles/tiles/S.Shukla/photo3_piece_09.jpg']}]},
+  {id:'puz004',type:'puzzle',tag:'VISUAL',difficulty:'Special',instructions:'Select two tiles to swap them and rearrange this 3x3 grid to reveal a figure from India\'s space history.',boards:[{title:'Reassemble the image',solution:[0,1,2,3,4,5,6,7,8],tiles:['Puzzles/tiles/RakeshSharma/photo4_piece_01.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_02.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_03.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_04.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_05.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_06.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_07.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_08.jpg','Puzzles/tiles/RakeshSharma/photo4_piece_09.jpg']}]},
 ];
 
 const AUDIO_QUESTIONS = [
@@ -596,7 +598,7 @@ const SPECIAL_POOLS = [SATELLITE_QUESTIONS, PUZZLE_QUESTIONS, AUDIO_QUESTIONS];
 
 const SUPABASE_URL = 'https://iwudaylnhjkfbaupcgfx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_lRSQfU93U62prcB7YODuTQ_zmNT41bF';
-const DIFFICULTY_MIX = { 'Medium': 8, 'Hard': 8, 'Very Hard': 4 };
+const DIFFICULTY_MIX = { 'Medium': 7, 'Hard': 7, 'Very Hard': 3 };
 const BASE_QUIZ_SIZE = Object.values(DIFFICULTY_MIX).reduce((a, b) => a + b, 0);
 const QUIZ_SIZE = BASE_QUIZ_SIZE + SPECIAL_POOLS.length;
 const QUESTIONS_VERSION = 'nsd-2026-isro-v1';
